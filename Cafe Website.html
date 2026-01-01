@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="./Cafe Website_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Website</title>
+
+    <!-- ✅ Razorpay Payment Script -->
+    <script src="./Cafe Website_files/checkout.js.download"></script>
+  <style type="text/css" data-vite-dev-id="C:/Users/drasti godhani/OneDrive/Documents/website/react cafe/client/src/index.css">:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e3ebf079;
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg, #67a1c8e2, #072a4d,#a5cdeb);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: #070323 !important;
+}
+
+.welcome-section {
+  position: relative;
+  background-image: url("uploads/books/lib12.avif");
+  height: 300px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  text-align: top;
+  color: rgb(243, 242, 235);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(22, 167, 220, 0.11);
+}
+
+.tour-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgb(11, 48, 194);
+}
+
+.tour-img {
+  height: 400px;
+  object-fit: contain;
+}
+
+.welcome-text {
+  font-size: 3rem;
+  z-index: 1;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.highlight {
+  color: #14b5d9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform:   (-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/drasti godhani/OneDrive/Documents/website/react cafe/client/src/sections/Header.css">/* Ensure html and body take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header-section {
+  width: 1470px;
+  height: 100vh; /* full viewport height */
+  background-image: url("img/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.header-section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.header-section p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.header-section button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #4b2e2e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-section button:hover {
+  background-color: #6b403f;
+}
+.header {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+.header p {
+  font-size: 14px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 50px;
+  }
+
+  .header p {
+    font-size: 18px;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/drasti godhani/OneDrive/Documents/website/react cafe/client/src/sections/menu.css">/* ================= MENU SECTION ================= */
+.menu-section {
+  padding: 40px 20px;
+  background-color: #f9f5f1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #7b4f25;
+}
+
+/* ================= CATEGORY BUTTONS ================= */
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  overflow-x: auto;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+}
+
+.menu-btn {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: #fff;
+  color: #7b4f25;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.menu-btn.active,
+.menu-btn:hover {
+  background-color: #7b4f25;
+  color: #fff;
+}
+
+/* ================= MENU GRID ================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= MENU CARD ================= */
+.menu-card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+}
+
+.menu-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.menu-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.menu-info p {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.menu-price {
+  font-weight: bold;
+  color: #7b4f25;
+  margin-bottom: 10px;
+}
+
+.brown-btn {
+  background-color: #7b4f25;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.brown-btn:hover {
+  background-color: #a05e2c;
+}
+
+/* ================= RESPONSIVE GRID ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .menu-img {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================= POPUP OVERLAY ================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* ================= POPUP BOX ================= */
+.popup-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #7b4f25;
+}
+
+.popup-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.popup-item-name {
+  font-size: 1.2rem;
+  color: #7b4f25;
+  margin-bottom: 6px;
+}
+
+.popup-item-desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.popup-price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ================= QTY ================= */
+.qty-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.qty-btn {
+  background: #7b4f25;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ================= ORDER FORM ================= */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-form input,
+.order-form textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f5f1;
+}
+
+.popup-confirm-btn {
+  background: #7b4f25;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup-confirm-btn:hover {
+  background: #a05e2c;
+}
+.qty-num{
+  color: #000;
+}
+.select{
+  background-color: #f9f5f1;
+  color: #000;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/drasti godhani/OneDrive/Documents/website/react cafe/client/src/sections/specialoffer.css">/* ===== OFFER SECTION ===== */
+.offer-section {
+  padding: 50px 5%;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f5f1;
+  text-align: center;
+}
+
+.offer-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #5a3d30;
+}
+
+.offer-subtitle {
+  max-width: 600px;
+  margin: 10px auto 35px;
+  color: #777;
+  font-size: 15px;
+}
+
+/* ===== GRID ===== */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* ===== GLASS CARD ===== */
+.offer-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== INSTAGRAM STYLE IMAGE (1:1) ===== */
+.offer-img,
+.offer-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* ===== CONTENT ===== */
+.offer-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.offer-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4d2b1f;
+}
+
+.offer-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.offer-desc {
+  font-size: 12px;
+  color: #666;
+  margin: 6px 0 12px;
+}
+
+/* ===== BUTTON ===== */
+.offer-btn {
+  margin-top: auto;
+  align-self: center;
+  background: #4d2b1f;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.offer-btn:hover {
+  background: #2d180f;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile — 3 cards per row FIXED */
+@media (max-width: 576px) {
+  .offer-section {
+    padding: 30px 12px;
+  }
+
+  .offer-grid {
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 per row */
+    gap: 12px;
+  }
+
+  .offer-content {
+    padding: 10px;
+  }
+
+  .offer-name {
+    font-size: 12px;
+  }
+
+  .offer-desc {
+    font-size: 11px;
+  }
+
+  .offer-btn {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+}
+
+/* ===== GLOBAL TEXT COLOR ===== */
+h2, h3, p {
+  color: #5a3d30;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/drasti godhani/OneDrive/Documents/website/react cafe/client/src/sections/TableReservation.css">.reservation-wrapper {
+  padding: 100px 8%;
+  background: #f6f6f6;
+}
+
+.reservation-box {
+  display: flex;
+  background: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.reservation-image {
+  width: 45%;
+}
+
+.reservation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reservation-form {
+  width: 55%;
+  padding: 40px;
+}
+
+.reservation-form h2 {
+  margin-bottom: 25px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #666;
+  background-color: #f6f6f6;
+}
+
+.reservation-form textarea {
+  height: 90px;
+  resize: none;
+  margin-top: 15px;
+}
+
+.btn-row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-row button {
+  background: #02633a;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.cancel {
+  color: #e86b6b;
+  cursor: pointer;
+  font-size: 14px;
+}
+/* 🔴 Cancel button red */
+.cancel-btn {
+  background: red !important;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.cancel-btn:hover {
+  background: darkred;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/drasti godhani/OneDrive/Documents/website/react cafe/client/src/admin/AdminMenuDashboard.css">/* ===== LAYOUT ===== */
+.admin-layout {
+  display: flex;
+}
+
+.admin-content {
+  margin-left: 260px;   /* sidebar width */
+  padding: 30px;
+  width: calc(100% - 260px);
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+/* ===== TITLE ===== */
+.page-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ===== CARD ===== */
+.admin-card {
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+/* ===== TABLE ===== */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: #212529;
+  color: white;
+  padding: 12px;
+}
+
+.admin-table td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.admin-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== IMAGES ===== */
+.image-box {
+  display: flex;
+  gap: 8px;
+}
+
+.image-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ===== MODAL ===== */
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-card {
+  background: white;
+  width: 420px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Custom Bootstrap modal backdrop */
+.custom-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1050;
+}
+
+/* Make modal visible without JS */
+.modal.fade.show {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  width: 420px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-body label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+}
+
+.modal-body .form-control {
+  margin-bottom: 10px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+</style></head>
+  <body>
+    <div id="root"><nav style="position: fixed; top: 0px; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; z-index: 100; background-color: rgba(0, 0, 0, 0.6); color: white;"><h2 style="cursor: pointer;">☕ Bean &amp; Byte Cafe</h2><ul class="desktop-menu" style="display: flex; list-style: none; gap: 35px; margin: 0px; padding: 0px;"><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">home</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">about</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">menu</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">special offer</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">reservation</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">contact</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">map</li></ul><div class="mobile-menu-btn" style="font-size: 28px; cursor: pointer;">☰</div><ul style="display: none; position: absolute; top: 60px; left: 0px; flex-direction: column; width: 100%; background-color: rgba(0, 0, 0, 0.9); padding: 20px 0px; text-align: center; gap: 20px;"><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">home</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">about</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">menu</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">special offer</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">reservation</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">contact</li><li style="cursor: pointer; border-bottom: none; padding-bottom: 2px; text-transform: capitalize;">map</li></ul></nav><section id="home" class="header-section"><h1>Welcome to Our Cafe</h1><p>Where Every Cup Feels Special ☕</p><button>Explore Menu</button></section><section id="about" style="padding: 10px; background-color: rgb(249, 245, 241); font-family: Poppins, sans-serif;"><div style="max-width: 1100px; margin: 0px auto; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;"><div style="flex: 1 1 400px;"><h1 style="color: rgb(75, 46, 46); text-align: center;">About Us</h1><h2 style="color: rgb(75, 46, 46); margin-bottom: 20px;">Welcome to Our Cafe</h2><p style="color: rgb(122, 107, 107); margin-bottom: 20px; line-height: 1.8;">Experience the best coffee and freshly baked pastries in town! Our café combines cozy ambiance with premium ingredients to give you a delightful experience. Whether it's a morning coffee, a casual meetup, or a quiet spot to work, our café is your perfect destination.</p><p style="color: rgb(122, 107, 107); line-height: 1.8;">From artisan espresso to decadent desserts, every detail is crafted with love. Come and enjoy the warmth and aroma of freshly brewed coffee in a welcoming space designed for comfort and connection.</p></div><div style="flex: 1 1 400px;"><img alt="Cafe Interior" src="./Cafe Website_files/photo-1495474472287-4d71bcdd2085" style="width: 90%; border-radius: 15px; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;"></div></div></section><section class="menu-section"><h1 class="menu-title">Delicious Menu</h1><div class="menu-buttons"><button class="menu-btn active">COFFEE CLASSICS</button><button class="menu-btn ">SPECIALTY COFFEE</button><button class="menu-btn ">PIZZA SPECIAL</button><button class="menu-btn ">SIGNATURE DRINKS</button><button class="menu-btn ">DESSERTS</button></div><div class="menu-grid"><div class="menu-card"><img class="menu-img" alt="Espresso" src="./Cafe Website_files/Espresso.jpg"><div class="menu-info"><h3>Espresso</h3><p>Strong classic espresso shot.</p><span class="menu-price">₹$20.50</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Americano" src="./Cafe Website_files/images"><div class="menu-info"><h3>Americano</h3><p>Smooth espresso with hot water.</p><span class="menu-price">₹$22.00</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Cappuccino" src="./Cafe Website_files/Cappuccino.jpg"><div class="menu-info"><h3>Cappuccino</h3><p>Espresso topped with foamy milk.</p><span class="menu-price">₹$25.00</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Cafe Latte" src="./Cafe Website_files/Cafe Latte.webp"><div class="menu-info"><h3>Cafe Latte</h3><p>Creamy espresso with steamed milk.</p><span class="menu-price">₹$28.00</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Mocha" src="./Cafe Website_files/Mocha.webp"><div class="menu-info"><h3>Mocha</h3><p>Chocolate + coffee perfection.</p><span class="menu-price">₹$30.00</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Hazelnut Coffee" src="./Cafe Website_files/Hazelnut Coffee.jpg"><div class="menu-info"><h3>Hazelnut Coffee</h3><p>Nutty flavored smooth coffee.</p><span class="menu-price">₹$32.00</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Flat White" src="./Cafe Website_files/Flat White.jpg"><div class="menu-info"><h3>Flat White</h3><p>Ristretto espresso with silky milk.</p><span class="menu-price">₹$29.00</span></div><button class="brown-btn">Order Now</button></div><div class="menu-card"><img class="menu-img" alt="Irish Coffee" src="./Cafe Website_files/Irish Coffee.jpg"><div class="menu-info"><h3>Irish Coffee</h3><p>Rich coffee with Irish cream.</p><span class="menu-price">₹$40.00</span></div><button class="brown-btn">Order Now</button></div></div></section><section id="special-offer" class="offer-section"><h1 class="offer-title">OUR OFFER</h1><div class="offer-grid"><div class="offer-card"><img alt="Margherita Classic Combo" src="./Cafe Website_files/combo.png"><h3>$80.30</h3><h2>Margherita Classic Combo</h2><p>Cheese-loaded Margherita pizza + 2 cold drinks + fries.</p><button class="offer-btn">Order Now</button></div><div class="offer-card"><img alt="Cheese Grill Sandwich Combo" src="./Cafe Website_files/grill sandwich.jpg"><h3>$50.00</h3><h2>Cheese Grill Sandwich Combo</h2><p>Double-layered cheese grill sandwich + fries + coke.</p><button class="offer-btn">Order Now</button></div><div class="offer-card"><img alt="Veg Burger Combo" src="./Cafe Website_files/brger.avif"><h3>$30.50</h3><h2>Veg Burger Combo</h2><p>Crispy veg burger + fries + cold coffee.</p><button class="offer-btn">Order Now</button></div></div></section><section id="reservation" class="reservation-wrapper"><div class="reservation-box"><div class="reservation-image"><img alt="table" src="./Cafe Website_files/photo-1544148103-0773bf10d330"></div><div class="reservation-form"><h2>Reservation Table</h2><form><div class="grid-2"><input placeholder="Your Name" required="" name="name"><input placeholder="Your Email" required="" type="email" name="email"></div><div class="grid-2"><input placeholder="Phone Number" required="" name="phone"><input required="" type="date" name="date"></div><div class="grid-2"><input required="" type="time" name="from"><input required="" type="time" name="to"></div><select name="guests"><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6 Guests</option></select><textarea name="message" placeholder="Special Information"></textarea><div class="btn-row"><button type="submit" class="book-btn">Book a table</button><button type="button" class="cancel-btn">Request Cancellation</button></div></form></div></div></section><section id="contact" style="padding: 80px 20px; background-color: rgb(249, 245, 241); font-family: Poppins, sans-serif;"><div style="max-width: 1100px; margin: 0px auto; display: flex; flex-wrap: wrap; gap: 50px;"><div style="flex: 1 1 350px;"><h1 style="color: rgb(75, 46, 46); margin-bottom: 20px; text-align: center;">Contact Us</h1><p style="color: rgb(122, 107, 107); margin-bottom: 12px;">We'd love to hear from you! Reach out via email, phone, or visit us.</p><ul style="list-style: none; padding: 0px; line-height: 2; color: rgb(122, 107, 107); font-size: 15px;"><li><strong>Email:</strong> info@cafe.com</li><li><strong>Phone:</strong> +91 98765 43210</li><li><strong>Address:</strong> 119&amp;120, AR Mall, Panvel Point, Surat</li></ul></div><div style="flex: 1 1 350px;"><form style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px); padding: 30px; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px; display: flex; flex-direction: column; gap: 15px;"><input placeholder="Your Name" type="text" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgb(214, 197, 184); background-color: rgb(253, 251, 249); font-size: 14px; color: rgb(75, 46, 46); outline: none;"><input placeholder="Your Email" type="email" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgb(214, 197, 184); background-color: rgb(253, 251, 249); font-size: 14px; color: rgb(75, 46, 46); outline: none;"><textarea placeholder="Your Message" rows="4" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgb(214, 197, 184); background-color: rgb(253, 251, 249); font-size: 14px; color: rgb(75, 46, 46); outline: none; resize: none;"></textarea><button type="submit" style="margin-top: 10px; padding: 13px; border-radius: 30px; border: none; background-color: rgb(123, 79, 37); color: rgb(255, 255, 255); font-weight: 600; letter-spacing: 0.5px; cursor: pointer; transition: 0.3s;">Send Message</button></form></div></div></section><section id="map" style="padding: 80px 20px; background-color: rgb(249, 245, 241); font-family: Poppins, sans-serif;"><div style="max-width: 1100px; margin: 0px auto; text-align: center;"><h2 style="color: rgb(75, 46, 46); margin-bottom: 30px;">Find Us</h2><div style="border-radius: 15px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;"><iframe class="map" src="./Cafe Website_files/maps.html" width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cafe Location" style="border: 0px;"></iframe></div><p style="margin-top: 15px; color: rgb(122, 107, 107);">119&amp;120, AR Mall, Panvel Point, Surat, Gujarat</p></div></section><footer style="background-color: rgb(59, 47, 47); color: rgb(255, 255, 255); padding-top: 14px; font-family: Poppins, sans-serif; position: relative; overflow: hidden;"><div style="position: absolute; top: -160px; left: 0px; width: 100%; height: 180px; background-image: url(&quot;./img/coffee-beans.png&quot;); background-repeat: no-repeat; background-size: cover; background-position: center bottom; z-index: 1;"></div><div style="display: grid; grid-template-columns: 280px 1fr; gap: 50px; width: 90%; max-width: 1300px; margin: auto; position: relative; z-index: 2;"><div style="border-right: 1px solid rgba(255, 255, 255, 0.15); padding-right: 30px;"><div style="width: 160px; height: 160px; border-radius: 50%; background-color: rgb(59, 47, 47); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;"><img alt="Beat &amp; Byte Cafe" src="./Cafe Website_files/logo.png" style="width: 200px; height: 200px; object-fit: contain;"></div><p style="font-size: 14px; color: rgb(221, 221, 221); line-height: 1.7;"><strong>Beat &amp; Byte Cafe</strong></p><p style="font-size: 14px; color: rgb(221, 221, 221); line-height: 1.7;">📍 Surat, Gujarat</p><p style="font-size: 14px; color: rgb(221, 221, 221); line-height: 1.7;">📞 +91 93134 33737</p><p style="font-size: 14px; color: rgb(221, 221, 221); line-height: 1.7;">✉️ thebeatbytecafe@gmail.com</p></div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px;"><div><h3 style="color: rgb(245, 193, 108); font-size: 18px; margin-bottom: 14px;">Navigation</h3><ul style="list-style: none; padding: 0px; margin: 0px;"><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#home" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Home</a></li><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#about" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">About</a></li><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#menu" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Menu</a></li><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#contact" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Contact</a></li></ul></div><div><h3 style="color: rgb(245, 193, 108); font-size: 18px; margin-bottom: 14px;">Our Menu</h3><ul style="list-style: none; padding: 0px; margin: 0px;"><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#menu" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Coffee</a></li><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#menu" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Pizza</a></li><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#menu" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Sandwich</a></li><li style="margin-bottom: 10px;"><a href="http://localhost:5173/#menu" style="color: rgb(230, 230, 230); text-decoration: none; font-size: 14px;">Desserts</a></li></ul></div><div><h3 style="color: rgb(245, 193, 108); font-size: 18px; margin-bottom: 14px;">About Cafe</h3><p style="font-size: 14px; color: rgb(221, 221, 221); line-height: 1.7;">Fresh coffee, tasty snacks and a cozy place to relax. Inspired by community-driven cafes like The Tavern.</p></div></div></div><div style="text-align: center; margin-top: 50px; padding: 20px 0px; border-top: 1px solid rgba(255, 255, 255, 0.15); font-size: 13px; color: rgb(204, 204, 204);">© 2025 Beat &amp; Byte Cafe | All Rights Reserved</div></footer></div>
+    <script type="module" src="./Cafe Website_files/main.jsx"></script>
+  
+
+<div class="razorpay-container" style="z-index: 2147483647; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; max-height: 100dvh; backface-visibility: hidden; overflow-y: visible;"><style>@keyframes rzp-rot{to{transform: rotate(360deg);}}@-webkit-keyframes rzp-rot{to{-webkit-transform: rotate(360deg);}} .razorpay-container > iframe {min-height: 100%!important;}</style><div class="razorpay-backdrop" style="min-height: 100%; transition: 0.3s ease-out; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"><span style="text-decoration: none; background: rgb(214, 68, 68); border: 1px dashed white; padding: 3px; opacity: 0; transform: rotate(45deg); transition: opacity 0.3s ease-in; font-family: lato, ubuntu, helvetica, sans-serif; color: white; position: absolute; width: 200px; text-align: center; right: -50px; top: 50px;">Test Mode</span></div><iframe allowtransparency="true" frameborder="0" width="100%" height="100%" src="./Cafe Website_files/public.html" class="razorpay-checkout-frame" allow="otp-credentials; payment; clipboard-write; publickey-credentials-get https://api.razorpay.com; publickey-credentials-create &#39;self&#39; https://api.razorpay.com; web-share; camera *" style="opacity: 1; height: 100%; position: relative; background: none; display: block; border: 0px none transparent; margin: 0px; padding: 0px; z-index: 2;"></iframe></div></body></html>
